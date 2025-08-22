@@ -5,12 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="manifest" href="site.webmanifest">
+
 <style>
 body {
     background-color: #ffffff;
     margin: 0;
-}
-h2,h3 {
+ }
+.Kan, .Math, .Bio, .Ear, .Wor, .Eth {
+ display: none;
+ }
+ .show {
+ display: block;
+ }
+
+h2,h3, h4 {
 font-family: "游ゴシック","ヒラギノ角ゴ ProN";
 }
 a.hako {
@@ -47,7 +55,76 @@ footer {
 <h2 id="hako">漢文、数学、生物基礎・地学基礎、世界史、倫理をまとめたやつ</h2>
 </header>
 <main>
-<h3>それぞれボタンで非表示できるよ</h3>
+<h3>それぞれボタンで表示できるよ</h3>
+<button id="btnKan">漢文の単元を表示</button>
+<button id="btnMath">数学の単元を表示</button>
+
+<button id="btnBio">生物の単元を表示</button>
+
+<button id="btnEar">地学の単元を表示</button>
+
+<button id="btnWor">世界史の単元を表示</button>
+
+<button id="btnEth">倫理の単元を表示</button>
+<div class="Eth"><h4>
+¶0.序章<br>
+¶1.現代を生きる自己の課題<br>
+§1-1.個性的な主体としての自己<br>
+§1-2.心と行動をめぐる探究<br>
+¶2.人間としての自覚<br>
+§2-1.哲学の始源：ギリシア思想<br>
+§2-2.唯一神の宗教：キリスト教・イスラーム教<br>
+§2-3.東洋思想の源流：仏教・儒教<br>
+§2-4.芸術と倫理<br>
+¶3.現代を形作る倫理<br>
+§3-1.近代の成立<br>
+§3-2.世界と人間をめぐる探究<br>
+¶4.国際社会に生きる日本人としての自覚<br>
+§3-1.日本の風土と精神文化<br>
+§4-2.日本の近代化と人々の生き方<br>
+¶5.現代における諸課題の探究<br>
+§5-1.自然や科学技術をめぐる諸課題<br>
+§5-2.社会や文化に関わる諸課題<br>
+</h4></div>
+
+<script>
+  const btnMath = document.getElementById("btnMath");
+  const divMath = document.querySelector(".Math");
+
+  btnMath.addEventListener("click", () => {
+    divMath.classList.toggle("show");
+  });
+
+  const btnBio = document.getElementById("btnBio");
+  const divBio = document.querySelector(".Bio");
+
+  btnBio.addEventListener("click", () => {
+    divBio.classList.toggle("show");
+  });
+
+  const btnEar = document.getElementById("btnEar");
+  const divEar = document.querySelector(".Ear");
+
+  btnEar.addEventListener("click", () => {
+    divEar.classList.toggle("show");
+  });
+
+  const btnWor = document.getElementById("btnWor");
+  const divWor = document.querySelector(".Wor");
+
+  btnWor.addEventListener("click", () => {
+    divWor.classList.toggle("show");
+  });
+
+  const btnEth = document.getElementById("btnEth");
+  const divEth = document.querySelector(".Eth");
+
+  btnEth.addEventListener("click", () => {
+    divEth.classList.toggle("show");
+  });
+</script>
+
+
 </main>
 <footer>
 <h3><a href="#top" class="kasen">トップに戻る</a></h3><br>
